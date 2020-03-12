@@ -2,9 +2,9 @@ package com.ww.controller;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
@@ -23,11 +23,22 @@ public class TestController {
 ////        tb.test();\
 
 
-        ReentrantLock lock = new ReentrantLock(true);
-        lock.lock();
-        lock.unlock();
+//        ReentrantLock lock = new ReentrantLock(true);
+//        lock.lock();
+//        lock.unlock();
 
-
+//        Condition condition = lock.newCondition();
+//        lock.lock();
+//        try {
+//            condition.await();
+//            System.out.println("234");
+//            condition.signal();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        finally {
+//            lock.unlock();
+//        }
 
     }
 
