@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 属性解析器 方式一 -->
+    <!--<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">-->
+        <!--<property name="customEditors">-->
+            <!--<map>-->
+                <!--<entry key = "java.util.Date" value="com.ww.controller.propertiesEditor.DateEidtor">-->
+                <!--</entry>-->
+            <!--</map>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+    <!-- 方式二 -->
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="propertyEditorRegistrars">
+            <list>
+                <bean  class="com.ww.controller.propertiesEditor.editorRegistrarsTest" />
+            </list>
+        </property>
+    </bean>
+    <!-- 自定义对象 -->
+    <bean id="student" class="com.ww.controller.propertiesEditor.Student">
+        <property name="birthday">
+            <value>1988-08-08 12:12:20</value>
+        </property>
+    </bean>
+</beans>
