@@ -31,4 +31,9 @@ public class UserServiceImpl implements UserService{
         UserDO result =  userMapper.sayFeign();
         return result;
     }
+
+    @Override
+    public void getcc(String ... cc) {
+
+    }
 }

@@ -33,6 +33,8 @@ public class UserController {
 //    }
 
 
-
+        public void stez(String cc){
+            userService.getcc(cc);
+        }
 
 }

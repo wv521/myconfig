@@ -22,4 +22,5 @@ public interface UserService {
 //@RequestMapping(value="/api/producer/getFeignList",method = RequestMethod.GET)
 UserDO getFeignList();
 
+    void getcc(String ...cc);
 }
