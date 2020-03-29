@@ -2,6 +2,8 @@ package com.ww.controller;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.Condition;
@@ -41,6 +43,9 @@ public class TestController {
 //        }}
 
 //        System.out.println(Math.round(-1.5));
+        DayOfWeek dayOfWeek = LocalDate.of(2020, 03,13).getDayOfWeek();
+        System.out.println(dayOfWeek);
+
     }
 
 }
